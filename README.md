@@ -1,9 +1,9 @@
 Datasets: https://archive.org/details/stackexchange
-> health
-> raspberrypi
-> aviation gardening
-> magento
+1. health
+2. raspberrypi
+3. aviation gardening
+4. magento
 
-zip:
+Dataset zip:
 https://drive.google.com/drive/folders/19FbFTryIb-BDixhpxJmvGWysXxzzrZS8?usp=sharing
 
