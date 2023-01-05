@@ -119,6 +119,7 @@ def usersToDataframe(path):
     UpVotes = []
     DownVotes = []
     Views = []
+    Location = []
     
     tree = ET.parse(path)
     root = tree.getroot()
@@ -152,8 +153,12 @@ def usersToDataframe(path):
             Views.append(child.attrib['Views'])
         except:
             Views.append(None)
+        try:
+            Location.append(child.attrib['Location'])
+        except:
+            Location.append(None)
                                  
-    column_list = ['Id', 'Reputation', 'CreationDate', 'DisplayName', 'UpVotes', 'DownVotes', 'Views']
-    users = pd.DataFrame(list(zip(Id, Reputation, CreationDate, DisplayName, UpVotes, DownVotes, Views)), columns= column_list)
+    column_list = ['Id', 'Reputation', 'CreationDate', 'DisplayName', 'UpVotes', 'DownVotes', 'Views', 'Location']
+    users = pd.DataFrame(list(zip(Id, Reputation, CreationDate, DisplayName, UpVotes, DownVotes, Views, Location)), columns= column_list)
     return users
                               
